@@ -6,20 +6,6 @@
   display: inline-block
 }
 
-#boxColor1{
-    background-color: black;
-}
-
-#boxColor2{
-    background-color: blue;
-}
-#boxColor3{
-    background-color: crimson;
-}
-#boxColor4{
-    background-color: green;
-}
-
 #pixel-board{
     display: table;
     width: 500px;

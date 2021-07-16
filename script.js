@@ -1,6 +1,15 @@
 let palette = document.querySelector("#color-palette")
 
 
+let boxColor1 = document.getElementById("boxColor1")
+boxColor1.style.backgroundColor = "black"
+let boxColor2 = document.getElementById("boxColor2")
+boxColor2.style.backgroundColor = "red"
+let boxColor3 = document.getElementById("boxColor3")
+boxColor3.style.backgroundColor = "blue"
+let boxColor4 = document.getElementById("boxColor4")
+boxColor4.style.backgroundColor = "yellow"
+
 //criando linhas
 const pxBoardList = document.querySelector("#pixel-board")
 function addLi() {
@@ -37,9 +46,13 @@ function selectColors(event) {
 
 // quando eu clicar na posição de array ele deve ser colorido com a cor selecionada
 
+
 let selectedPixel = document.querySelectorAll(".pixel")
 
-selectedPixel.addEventListener("click", coloredPixel)
-function coloredPixel(event) {
-    event.target.style.backgroundColor = "black"
+for( i = 0; i < selectedPixel.length; i += 1 ){
+    selectedPixel[i].addEventListener("click", coloredPixel)
+    function coloredPixel(event) { 
+        let colorSelected = document.getElementsByClassName("selected")[0].style.backgroundColor
+        event.target.style.backgroundColor = colorSelected
+    }
 }
